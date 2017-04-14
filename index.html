@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+	<div id=instructions>
+		<h1>Hangman Borneo (the 3rd largest island in the world!)</h1>
+		<h2>Press a letter to begin</h2>
+	</div>
+
+	<div class=input>
+		<input id='letter' type='text' maxLength= '1'>
+		
+		<div class='side'>
+			
+			<h3>Won:</h3>
+			<h3>Lost:</h3>
+
+			<div class='title' id='wrong'>
+				<h3>Guessed:</h3>
+			</div>
+		</div>
+
+
+
+	<div class=game>
+		<script type="text/javascript">
+		//define variables
+		var win= 0;
+		var lose =0;
+		var remain= 12;
+		var guess = "";
+		var arrayGuessed = [];
+		var arrayLetter = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "_"];
+		//array of words that go with the theme, match picture and sound to attribute
+		var arrayWord=["borneo", "island", "rainforest", "indonesia", "malaysia", "brunei","tropical", "kinabalu", "river", "deforestation", "orangutan", "hornbill", "cloudedleopard","pigmy", "rafflesia", "monkey"];
+		
+		//some extra code I want to think about:
+		// guess.tolowercase;
+		// for (var i = 0; i < vegetables.length; i++) {console.log("I hate " + vegetables[i]);}
+		
+
+		//computer generates word to use
+		function hangWord (){
+			var randWord = Math.floor(Math.random()*arrayWord.length);
+		}
+
+		// blank lines for each letter in the word
+		function blanks (randWord){
+			var answer = "";
+			for (var i =0; i < randWord.length; i++){
+				mask +=" _ ";
+					};
+			return blanks;
+		}
+		//event.key to lowercase
+		//runloop, -1 remaining guesses; fill spaces if event.key matches any hidden letters in the word
+		function alterAt (n, c, originalString){
+			var n = position;
+			var originalString= srcString;
+			var c = charInsert;
+
+			return originalString.substr(0,n) + c + originalString.substr(n+1,originalString.length);
+		}
+
+		function guess( letter, shown, answer) {
+			var checkLetter = -1;
+
+			checkLetter = answer.indexOf(letter);
+			while ( checkLetter >= 0 ) {
+				alterAt();
+				.indexOf( match, start );
+			}
+
+			return shown;
+		}
+
+
+
+
+		//if no such letters in word, push to arrayUsed list; any letter can only be used once per turn.
+		//if all letters are revealed, play music/show photo; win++; generate new word
+		//else if remain=0, reveal word with photo; lose++; generate new word
+
+
+
+		</script>
+	</div>
+
+</body>
+</html>
